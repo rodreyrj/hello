@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piscina Banes</title>
+    <meta name="description" content="Piscina Banes: Tu lugar ideal para refrescarte y disfrutar de parrilladas. ¡Gran inauguración este 17 de Agosto!">
+    <meta name="keywords" content="Piscina, Parrilladas, Banes, Verano, Cuba, Piscina en Banes, Fiestas, Eventos">
+    <meta name="author" content="Piscina Banes">
+    <!-- Browser icons and theme -->
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/pVsXHW4N/Whats-App-Image-2025-08-16-at-3-45-23-PM.jpg">
+     <link rel="apple-touch-icon" href="https://i.postimg.cc/pVsXHW4N/Whats-App-Image-2025-08-16-at-3-45-23-PM.jpg">
+    <meta name="theme-color" content="#007bff" />
+    <!-- Google Fonts and Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <!-- Integrated CSS styles -->
+    <style>
+        /* === CSS variables for consistent colors and styles === */
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #28a745;
+            --accent-color: #ffc107;
+            --text-dark: #343a40;
+            --text-light: #ffffff;
+            --bg-light: #f8f9fa;
+            --bg-dark-section: #343a40;
+            --card-bg: #ffffff;
+            --shadow-light: 0 0.5rem 1rem rgba(0, 0, 0, 0.08);
+            --shadow-medium: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.12);
+            --transition-speed: 0.3s ease-in-out;
+            --border-radius-lg: 12px;
+            --border-radius-sm: 6px;
+        }
+        
+        /* === General styles and reset === */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* === Header and navigation styles === */
+        header {
+            background-color: var(--bg-dark-section);
+            color: var(--text-light);
+            padding: 1rem 2.5rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-medium);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            text-decoration: none;
+            color: var(--text-light);
+            transition: transform 0.3s ease-in-out;
+        }
+        .logo:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Desktop and mobile menu styles */
+        .desktop-nav, .mobile-nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .desktop-nav a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-weight: 500;
+            position: relative;
+            padding: 0 1rem;
+            transition: color var(--transition-speed);
+        }
+
+        .desktop-nav a:hover, .desktop-nav a.active {
+            color: var(--accent-color);
+        }
+        
+        /* Hamburger icon styles */
+        .hamburger-menu {
+            font-size: 1.8rem;
+            color: var(--text-light);
+            cursor: pointer;
+            display: none; /* Hidden by default on desktop */
+            z-index: 1001;
+        }
+        
+        /* Mobile dropdown menu styles */
+        .mobile-nav-links {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.9);
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transform: translateX(100%);
+            transition: transform 0.4s ease-in-out;
+            z-index: 1000;
+        }
+        .mobile-nav-links.open {
+            transform: translateX(0);
+        }
+        .mobile-nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 1.8rem;
+            font-weight: 600;
+            padding: 1.5rem 0;
+            transition: color 0.3s;
+        }
+        .mobile-nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* === Hero section styles === */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://i.postimg.cc/Td2gVCnJ/Whats-App-Image-2025-08-15-at-10-15-40-PM.jpg') no-repeat center center/cover;
+            color: var(--text-light);
+            padding: 8rem 2.5rem;
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 4.2rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+        }
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin-bottom: 2.5rem;
+        }
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        .hero-button {
+            display: inline-block;
+            padding: 1rem 2.2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all var(--transition-speed);
+            color: var(--text-light);
+            border: 2px solid var(--primary-color);
+            background-color: var(--primary-color);
+        }
+        .hero-button.secondary {
+            background-color: transparent;
+            border-color: var(--text-light);
+        }
+        .hero-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+        .hero-button.secondary:hover {
+            background-color: var(--text-light);
+            color: var(--primary-color);
+        }
+
+        /* === Section styles === */
+        section {
+            padding: 5rem 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.8rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        h2::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 4px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        /* === Ad section styles === */
+        #anuncio {
+            background-color: #f0f0f0;
+        }
+        .anuncio-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+        .anuncio-content img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-medium);
+        }
+        .anuncio-content h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+        .anuncio-content .share-button {
+            background-color: var(--secondary-color);
+            color: var(--text-light);
+            padding: 0.8rem 1.8rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color var(--transition-speed);
+        }
+        .anuncio-content .share-button:hover {
+            background-color: #218838;
+        }
+        
+        /* === Services section styles === */
+        #servicios {
+            background-color: var(--bg-light);
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+        .service-card {
+            background-color: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-light);
+            transition: transform var(--transition-speed);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 380px;
+            text-align: center;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-medium);
+        }
+        .service-card i {
+            font-size: 3.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+        .service-card h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+        .service-card p {
+            font-size: 1rem;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+        .service-card .card-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: auto;
+        }
+        .service-card .card-button {
+            background-color: var(--secondary-color);
+            color: var(--text-light);
+            padding: 0.8rem 1.8rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color var(--transition-speed);
+        }
+        .service-card .card-button.secondary {
+            background-color: var(--primary-color);
+        }
+        .service-card .card-button:hover {
+            background-color: #218838;
+        }
+        .service-card .card-button.secondary:hover {
+            background-color: #0056b3;
+        }
+        
+        /* === Contact section styles === */
+        #contactos {
+            background-color: var(--bg-dark-section);
+            color: var(--text-light);
+        }
+        #contactos h2 {
+            color: var(--text-light);
+        }
+        #contactos h2::after {
+            background-color: var(--accent-color);
+        }
+        .contactos-content {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto 2.5rem;
+        }
+        .contactos-content strong {
+            color: var(--accent-color);
+        }
+        .contactos-button {
+            display: inline-block;
+            padding: 1rem 2.2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all var(--transition-speed);
+            color: var(--text-light);
+            border: 2px solid var(--secondary-color);
+            background-color: var(--secondary-color);
+        }
+        .contactos-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            background-color: #218838;
+            border-color: #218838;
+        }
+        
+        /* === Footer styles === */
+        footer {
+            background-color: var(--bg-dark-section);
+            color: var(--text-light);
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            font-size: 0.95rem;
+        }
+        footer p {
+            margin-bottom: 0.8rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* === Floating buttons === */
+        #whatsapp-float-icon {
+            position: fixed;
+            bottom: 2.5rem;
+            right: 2.5rem;
+            background-color: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            box-shadow: var(--shadow-medium);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            text-decoration: none;
+            z-index: 999;
+            transition: background-color var(--transition-speed), transform 0.2s ease-in-out;
+            animation: pulse 2s infinite;
+        }
+        #whatsapp-float-icon:hover {
+            background-color: #128c7e;
+            transform: scale(1.08);
+            animation: none;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        #scroll-to-top-button {
+            position: fixed;
+            bottom: 2.5rem;
+            left: 2.5rem;
+            width: 60px;
+            height: 60px;
+            background-image: url('https://i.postimg.cc/Dw00fwnN/floating-Top-c6bccf5.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border: none;
+            cursor: pointer;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity var(--transition-speed), visibility var(--transition-speed);
+        }
+        #scroll-to-top-button.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* === Media Queries for responsive design === */
+        @media (max-width: 768px) {
+            .desktop-nav {
+                display: none; /* Hide desktop menu on mobile */
+            }
+            .hamburger-menu {
+                display: block; /* Show hamburger icon on mobile */
+            }
+            
+            /* Specific mobile optimizations */
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .anuncio-content img {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#inicio" class="logo">Piscina Banes</a>
+        
+        <!-- Desktop navigation -->
+        <nav class="desktop-nav">
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#anuncio">Anuncio</a>
+            <a href="#contactos">Contacto</a>
+        </nav>
+
+        <!-- Hamburger menu for mobile -->
+        <i class="fas fa-bars hamburger-menu"></i>
+        <nav class="mobile-nav-links">
+            <i class="fas fa-times hamburger-menu close-icon"></i>
+            <!-- Mobile navigation links -->
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#anuncio">Anuncio</a>
+            <a href="#contactos">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Welcome section -->
+        <section class="hero" id="inicio">
+            <h1>¡Te damos la bienvenida a Piscina Banes!</h1>
+            <p>Tu lugar ideal para refrescarte y disfrutar de parrilladas. ¡Te esperamos este **17 de Agosto** para celebrar juntos la apertura!</p>
+            <div class="hero-buttons">
+                <a href="#servicios" class="hero-button">Ver Servicios</a>
+                <a href="tel:+5354006743" class="hero-button secondary">Llamar Ahora</a>
+            </div>
+        </section>
+        
+        <!-- Ad or article section -->
+        <section id="anuncio">
+            <h2>🎉 Gran Apertura de Verano 🎉</h2>
+            <div class="anuncio-content">
+                <img src="https://i.postimg.cc/jqMJN4VG/Screenshot-20250816-181948-Gallery.jpg" alt="Anuncio del evento de gran apertura">
+                <h3>¡El evento que estabas esperando!</h3>
+                <button id="share-button" class="share-button">
+                    <i class="fas fa-share-alt"></i> Compartir
+                </button>
+            </div>
+        </section>
+
+        <!-- Services section with 4 separate cards -->
+        <section id="servicios">
+            <h2>Nuestros Servicios</h2>
+            <div class="services-grid">
+                <!-- Barbecue service card -->
+                <div class="service-card">
+                    <i class="fas fa-fire-alt"></i>
+                    <h3>Parrillada</h3>
+                    <p>Disfruta de la más exquisita carne a la parrilla, con un sabor único que te hará agua la boca. ¡Perfectas para compartir con familia y amigos!</p>
+                    <div class="card-buttons">
+                        <a href="https://wa.me/5354006743?text=Hola,%20me%20interesan%20los%20servicios%20de%20parrillada." target="_blank" class="card-button">Reservar</a>
+                        <a href="tel:+5354006743" class="card-button secondary">Llamar</a>
+                    </div>
+                </div>
+                <!-- Pool access card -->
+                <div class="service-card">
+                    <i class="fas fa-swimmer"></i>
+                    <h3>Acceso a la Piscina</h3>
+                    <p>Relájate en nuestras aguas cristalinas y disfruta del sol. Contamos con áreas para toda la familia y un ambiente seguro.</p>
+                    <div class="card-buttons">
+                        <a href="https://wa.me/5354006743?text=Hola,%20quisiera%20más%20información%20sobre%20el%20acceso%20a%20la%20piscina." target="_blank" class="card-button">Más Información</a>
+                    </div>
+                </div>
+                <!-- Drink service card -->
+                <div class="service-card">
+                    <i class="fas fa-glass-martini-alt"></i>
+                    <h3>Dispensada</h3>
+                    <p>Acompaña tu día con una gran variedad de bebidas frías y refrescantes. ¡Perfectas para combatir el calor!</p>
+                    <div class="card-buttons">
+                        <a href="https://wa.me/5354006743?text=Hola,%20quisiera%20saber%20más%20sobre%20la%20dispensada." target="_blank" class="card-button">Ver Opciones</a>
+                    </div>
+                </div>
+                <!-- Billiards card -->
+                 <div class="service-card">
+                    <i class="fas fa-billiard-ball"></i>
+                    <h3>Billar</h3>
+                    <p>Demuestra tus habilidades y diviértete con una emocionante partida de billar. ¡Un servicio perfecto para los amantes de los juegos!</p>
+                    <div class="card-buttons">
+                        <a href="https://wa.me/5354006743?text=Hola,%20quisiera%20saber%20más%20sobre%20el%20billar." target="_blank" class="card-button">Jugar ahora</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact section -->
+        <section id="contactos">
+            <h2>¡Tu lugar para escapar de la rutina!</h2>
+            <p class="contactos-content">Ven a refrescarte del calor y disfrutar de la fiesta con tus amigos y familiares. Para más información, puedes contactarnos en el teléfono <strong><a href="tel:+5354006743" style="color: var(--accent-color); text-decoration: none;">5354006743</a></strong>. ¡Te esperamos!</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Piscina Banes. Todos los derechos reservados.</p>
+        <p>&copy; Diseñador De La Pagina rodreyrj.</p>
+        <p>página del creador <a href="https://rodreyrj.pages.dev" target="_blank" style="color: var(--text-light); text-decoration: underline;">rodreyrj.pages.dev</a></p>
+    </footer>
+
+    <!-- Floating WhatsApp button -->
+    <a href="https://wa.me/5354006743?text=Hola,%20quisiera%20saber%20más%20sobre%20la%20Piscina%20Banes." target="_blank" id="whatsapp-float-icon" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <!-- Floating scroll-to-top button -->
+    <a href="#inicio" id="scroll-to-top-button" aria-label="Volver arriba"></a>
+
+    <!-- Integrated JavaScript -->
+    <script>
+        // Wait for the DOM content to load
+        document.addEventListener('DOMContentLoaded', () => {
+            // Select elements for mobile menu
+            const hamburgerIcon = document.querySelector('.hamburger-menu');
+            const mobileMenu = document.querySelector('.mobile-nav-links');
+            const mobileLinks = document.querySelectorAll('.mobile-nav-links a');
+            const closeIcon = mobileMenu.querySelector('.close-icon');
+
+            // Function to open the mobile menu
+            const openMenu = () => {
+                mobileMenu.classList.add('open');
+            };
+
+            // Function to close the mobile menu
+            const closeMenu = () => {
+                mobileMenu.classList.remove('open');
+            };
+
+            // Event listener for hamburger and close button
+            hamburgerIcon.addEventListener('click', openMenu);
+            closeIcon.addEventListener('click', closeMenu);
+
+            // Close menu when a link is clicked
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', closeMenu);
+            });
+
+            // === Smooth scroll and active navigation logic ===
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+            const scrollToTopButton = document.getElementById('scroll-to-top-button');
+
+            const sectionObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const currentId = entry.target.id;
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href').includes(currentId)) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, { rootMargin: '-50% 0px -50% 0px' });
+
+            sections.forEach(section => {
+                sectionObserver.observe(section);
+            });
+
+            // Logic to show/hide the scroll-to-top button
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    scrollToTopButton.classList.add('show');
+                } else {
+                    scrollToTopButton.classList.remove('show');
+                }
+            });
+
+            // Smooth scroll logic for the scroll-to-top button
+            scrollToTopButton.addEventListener('click', (event) => {
+                event.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // === Share button logic (reverted to simpler version) ===
+            const shareButton = document.getElementById('share-button');
+            const shareUrl = "www.google.com";
+
+            shareButton.addEventListener('click', () => {
+                if (navigator.share) {
+                    // Use the Web Share API if available
+                    navigator.share({
+                        title: '¡Piscina Banes: Gran Inauguración!',
+                        text: 'Ven a la gran inauguración de Piscina Banes. ¡Te esperamos!',
+                        url: shareUrl,
+                    }).catch((error) => console.log('Error sharing:', error));
+                } else {
+                    // Fallback for browsers that don't support the API
+                    try {
+                        const tempInput = document.createElement('textarea');
+                        tempInput.value = shareUrl;
+                        document.body.appendChild(tempInput);
+                        tempInput.select();
+                        document.execCommand('copy');
+                        document.body.removeChild(tempInput);
+                        console.log('URL copied to clipboard');
+                    } catch (err) {
+                        console.error('Could not copy URL', err);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
